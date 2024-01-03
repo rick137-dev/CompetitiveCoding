@@ -2,7 +2,7 @@
 /*
 ID: caiulor1
 LANG: C
-PROG: namenum
+PROG: milk2
 */
 
 #include <stdio.h>
@@ -12,8 +12,22 @@ PROG: namenum
 
 void main()
 {
-    FILE *fin = fopen("namenumIN.txt", "r");
-    FILE *fout = fopen("namenumOUT.txt", "w");
+    FILE *fin = fopen("milk2IN.txt", "r");
+    FILE *fout = fopen("milk2OUT.txt", "w");
+
+    int n;
+    char buf[100];
+    fgets(buf, 100, fin);
+    n = atoi(buf);
+
+    int starts[n];
+    int ends[n];
+    int i = 0;
+    while (fgets(buf, 100, fin))
+    {
+        sscanf(buf, "%d %d\n", &starts[i], &ends[i]);
+        i++;
+    }
 
     fclose(fin);
     fclose(fout);
