@@ -2,7 +2,7 @@
 /*
 ID: caiulor1
 LANG: C
-PROG:
+PROG: namenum
 */
 
 #include <stdio.h>
@@ -12,9 +12,8 @@ PROG:
 
 void main()
 {
-
-    FILE *fin = fopen("transformIN.txt", "r");
-    FILE *fout = fopen("transformOUT.txt", "w");
+    FILE *fin = fopen("namenumIN.txt", "r");
+    FILE *fout = fopen("namenumOUT.txt", "w");
 
     fclose(fin);
     fclose(fout);
