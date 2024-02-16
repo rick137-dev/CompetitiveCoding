@@ -2,7 +2,7 @@
 /*
 ID: caiulor1
 LANG: C
-PROG: milk2
+PROG: milk
 */
 
 #include <stdio.h>
@@ -12,9 +12,9 @@ PROG: milk2
 
 void main()
 {
-    FILE *fin = fopen("milk2IN.txt", "r");
-    FILE *fout = fopen("milk2OUT.txt", "w");
+    FILE *fin = fopen("milkin.txt", "r");
+    FILE *fout = fopen("milkout.txt", "w");
 
-        fclose(fin);
+    fclose(fin);
     fclose(fout);
 }
