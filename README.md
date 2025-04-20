@@ -1,3 +1,1 @@
-This repository is to showcase my solutions (all in C) for Competitive Coding problems from various competitive coding websites. At the moment I am following the USACO training gateway, in the future
-I will also add solutions to problems from IOI past papers and Leetcode problems. All the currently posted solutions are from the USACO training program, if you'd like to read the problem statement they can be found
-on the USACO training gateway website. 
+This repository is to showcase my solutions for Competitive Coding problems from various competitive coding websites such as USACO training gateway, IOI and ICPC past papers, online contests and Codeforces solutions. All the problem statements can be found in the appropriate website, for USACO the training gateway, for IOI and ICPC I will link the past paper, and for Codeforces I will link the problem.
