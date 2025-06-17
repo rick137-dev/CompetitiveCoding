@@ -1,38 +1,31 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+    "version": "0.2.0",
+    "configurations": [
         {
-            "label": "clean build folder",
-            "type": "shell",
-            "command": "if exist build rmdir /s /q build"
-        },
-        {
-            "label": "build",
-            "type": "shell",
-            "command": "g++ secondMain.cpp -o build\\secondMain.exe",
-            "dependsOn": "clean build folder"
-        },
-        {
-            "label": "run",
-            "type": "shell",
-            "command": ".\\build\\secondMain.exe",
-            "dependsOn": "build"
-        },
-        {
-            "label": "delete build folder after run",
-            "type": "shell",
-            "command": "if exist build rmdir /s /q build",
-            "dependsOn": "run"
-        },
-        {
-            "label": "build, run, and clean",
-            "dependsOn": [
-                "delete build folder after run"
+            "name": "C/C++: Run secondMain.exe (external console)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\build\\secondMain.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "preLaunchTask": "build"
         }
     ]
 }
