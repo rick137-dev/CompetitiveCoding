@@ -11,10 +11,14 @@
 
 using namespace std;
 
-int mod = 1e9 + 7;
-
 int main()
 {
 
-       return 0;
+       int N;
+       cin >> N;
+       vector<int> mountains(N);
+       for (int i = 0; i < N; i++)
+       {
+              cin >> mountains[i];
+       }
 }
