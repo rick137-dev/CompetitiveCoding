@@ -8,17 +8,13 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <queue>
+#include <climits>
+#include <map>
 
 using namespace std;
 
 int main()
 {
 
-       int N;
-       cin >> N;
-       vector<int> mountains(N);
-       for (int i = 0; i < N; i++)
-       {
-              cin >> mountains[i];
-       }
+       return 0;
 }
