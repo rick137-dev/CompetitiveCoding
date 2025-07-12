@@ -11,8 +11,11 @@
 #include <climits>
 #include <stack>
 #include <map>
+#include <cmath>
 
 using namespace std;
+
+#define MOD 1000000007
 
 int main()
 {
