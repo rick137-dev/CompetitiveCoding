@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -14,8 +15,6 @@
 #include <cmath>
 
 using namespace std;
-
-#define MOD 1000000007
 
 int main()
 {

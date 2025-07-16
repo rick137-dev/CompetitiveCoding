@@ -2,7 +2,7 @@
 /*
 ID: caiulor1
 LANG: C++
-PROG: combo
+PROG:
 */
 
 #include <iostream>
@@ -11,16 +11,21 @@ PROG: combo
 #include <vector>
 #include <sstream>
 #include <set>
+#include <algorithm>
+#include <unordered_set>
+#include <unordered_map>
+#include <queue>
+#include <climits>
+#include <stack>
+#include <map>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    ifstream inputFile("barn1in.txt");
-    ofstream outputFile("barn1out.txt");
-   
-    inputFile.close();
-    outputFile.close();
+    freopen(".in", "r", stdin);
+    freopen(".out", "w", stdout);
 
     return 0;
 }
