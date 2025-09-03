@@ -21,7 +21,7 @@ void main()
     int WeekDay = 2;
     int months[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int Days[7] = {0, 0, 0, 0, 0, 0, 0};
-    // Monday tuesday ..
+
     int day = 2;
     int year = 1900;
     int leap;
