@@ -11,6 +11,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/2189
+
 // Solution using standard straight-line analytic geometry
 
 int main()

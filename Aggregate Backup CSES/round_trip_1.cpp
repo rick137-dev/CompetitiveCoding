@@ -16,6 +16,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1669
+
 bool dfs(unordered_map<int, vector<int>> &Alist, int currentNode, vector<bool> &visited, vector<int> &cycle, int parent)
 {
     visited[currentNode] = true;

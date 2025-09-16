@@ -15,7 +15,9 @@
 
 using namespace std;
 
-#define MOD 1000000007
+const int MOD = 1e9 + 7;
+
+// Problem : https://cses.fi/problemset/task/1671
 
 int main()
 {

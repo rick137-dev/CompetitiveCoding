@@ -14,7 +14,12 @@
 #include <cmath>
 
 using namespace std;
-// Generate DP table
+
+// Problem : https://cses.fi/problemset/task/3403
+
+// Since the problem requires the reconstruction of the subsequence, the minimum space complexity is 2D
+
+// Generate DP table, 2D Recursive solution
 int commonSub(vector<int> &a, vector<int> &b, int i, int j, vector<vector<int>> &dp)
 {
     if (i < 0 || j < 0)
@@ -27,6 +32,31 @@ int commonSub(vector<int> &a, vector<int> &b, int i, int j, vector<vector<int>> 
     }
 
     return dp[i][j] = max(commonSub(a, b, i - 1, j, dp), commonSub(a, b, i, j - 1, dp));
+}
+
+// 2D Iterative solution
+int commonSubIterative(vector<int> &a, vector<int> &b)
+{
+    int n = a.size();
+    int m = b.size();
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            if (a[i - 1] == b[j - 1])
+            {
+                dp[i][j] = 1 + dp[i - 1][j - 1];
+            }
+            else
+            {
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+
+    return dp[n][m];
 }
 
 int main()

@@ -13,7 +13,7 @@ using namespace std;
 
 int mod = 1e9 + 7;
 
-// Could not use standard unordered_map technique since input makes hashing collision prone
+// Problem : https://cses.fi/problemset/task/1641
 
 int main()
 {

@@ -15,8 +15,12 @@
 #include <cmath>
 
 using namespace std;
+// Problem : https://cses.fi/problemset/task/3396
 
-// Sieve methods are too memory intensive, used standard primality check with use of the fact that every prime >=3 is of the form 6k+-1, so we can skip some numbers in the division check
+/*
+Sieve methods are too memory intensive, used standard primality check with use of the fact that every prime >=3
+is of the form 6k+-1, so we can skip some numbers in the division check
+*/
 
 bool isPrime(long long x)
 {

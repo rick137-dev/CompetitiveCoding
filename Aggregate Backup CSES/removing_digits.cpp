@@ -10,7 +10,9 @@
 #include <queue>
 
 using namespace std;
+// Problem : https://cses.fi/problemset/task/1637
 
+// Greedy solution
 int maxDigit(long a)
 {
        int curr = a % 10;

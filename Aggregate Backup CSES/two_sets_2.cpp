@@ -17,7 +17,12 @@ using namespace std;
 
 const long long mod = 1e9 + 7;
 
-// This is the recursive version, uses a large amount of memory and has a larger constant factor in the asymptotic time complexity. It returns twice the number required, and when dividing one must use the modular inverse of 2 instead of just standard division
+/*
+2D Recursive solution
+This is the recursive version, uses a large amount of memory and has a larger constant factor in the asymptotic time complexity.
+It returns twice the number required, and when dividing one must use the modular inverse of 2 instead of just standard division
+
+*/
 long long numSums(long long number, long long currentSum, vector<vector<long long>> &dp)
 {
     if (currentSum < 0)
@@ -36,8 +41,34 @@ long long numSums(long long number, long long currentSum, vector<vector<long lon
     return dp[number][currentSum] = (numSums(number - 1, currentSum, dp) % mod + numSums(number - 1, currentSum - number, dp) % mod) % mod;
 }
 
-// This is the bottom up version, which uses much less memory and has better overall temporal performance.
+// 2D Iterative version
+long long numSums2DIterative(long long N, long long target)
+{
+    vector<vector<long long>> dp(N + 1, vector<long long>(target + 1, 0));
 
+    for (int i = 0; i <= N; i++)
+    {
+        dp[i][0] = 1;
+    }
+
+    for (int i = 1; i <= N; i++)
+    {
+        for (int sum = 0; sum <= target; sum++)
+        {
+
+            dp[i][sum] = dp[i - 1][sum];
+
+            if (sum - i >= 0)
+            {
+                dp[i][sum] = (dp[i][sum] + dp[i - 1][sum - i]) % mod;
+            }
+        }
+    }
+
+    return dp[N][target];
+}
+
+// 1D Iterative Solution
 long long numSums(long long number, long long target)
 {
     vector<long long> current(target + 1, 0);
@@ -76,8 +107,6 @@ int main()
     }
 
     target = target / 2;
-
-    // vector<vector<long long>> dp(n + 1, vector<long long>(target + 1, -1)); -> only used for recursive DP
 
     const long long inverse_of_2 = 500000004; // used for the final division by 2 step
 

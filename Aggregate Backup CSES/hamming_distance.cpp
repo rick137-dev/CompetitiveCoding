@@ -8,6 +8,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/2136
+
 int hamming(int a, int b)
 {
     int c = a ^ b;

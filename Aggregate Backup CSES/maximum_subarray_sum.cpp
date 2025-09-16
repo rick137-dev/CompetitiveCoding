@@ -9,7 +9,9 @@
 
 using namespace std;
 
-// Kadane's algorithm solution
+// Problem : https://cses.fi/problemset/task/1643
+
+//  Kadane's algorithm solution
 int main()
 {
     int N;

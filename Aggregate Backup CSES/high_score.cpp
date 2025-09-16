@@ -15,11 +15,15 @@
 
 using namespace std;
 
-#define MOD 1000000007
+long MOD = 1e9 + 7;
 
-// Main trick for this problem is recognizing it as an inverted shortest path problem, but with the addition of needing to find negative weight cycles. Hence the best solution
-// here is to invert the sign of each weight and use the Bellman-Ford algorithm.
+// Problem : https://cses.fi/problemset/task/1673
 
+/*
+Main trick for this problem is recognizing it as an inverted shortest path problem, but with the addition of needing
+to find negative weight cycles. Hence the best solution here is to invert the sign of each weight and use the Bellman-Ford algorithm.
+
+*/
 int main()
 {
     unordered_map<int, vector<pair<int, int>>> Alist;

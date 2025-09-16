@@ -11,6 +11,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1193
+
 // Utilized bfs for graph traversal, using # as visited and pointers to previous nodes to reconstruct the path string to B node if reachable
 struct Node
 {
@@ -18,7 +20,7 @@ struct Node
     int posy;
     int posx;
     char next_step;
-    int prev; // pointer to previous node in queue
+    int prev; // pointer to previous node in queue, necessary to reconstruct path
 };
 
 bool canVisit(vector<string> &grid, int i, int j)
@@ -56,7 +58,6 @@ bool bfs(vector<string> &grid, int i, int j, string &best_path)
             return true;
         }
 
-        // right
         if (canVisit(grid, y, x + 1))
         {
             if (grid[y][x + 1] != 'B')
@@ -67,7 +68,6 @@ bool bfs(vector<string> &grid, int i, int j, string &best_path)
             q.push(nodes.size() - 1);
         }
 
-        // left
         if (canVisit(grid, y, x - 1))
         {
 
@@ -79,7 +79,6 @@ bool bfs(vector<string> &grid, int i, int j, string &best_path)
             q.push(nodes.size() - 1);
         }
 
-        // up
         if (canVisit(grid, y - 1, x))
         {
 
@@ -91,7 +90,6 @@ bool bfs(vector<string> &grid, int i, int j, string &best_path)
             q.push(nodes.size() - 1);
         }
 
-        // down
         if (canVisit(grid, y + 1, x))
         {
             if (grid[y + 1][x] != 'B')

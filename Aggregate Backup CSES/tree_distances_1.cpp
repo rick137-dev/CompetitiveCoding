@@ -16,6 +16,10 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1132
+
+// This is a DP based solution using DP on trees
+
 void farthestNode(vector<vector<int>> &Alist, int currentNode, vector<bool> &visited, int &maxDist, int &farNode, int currentDistance)
 {
     visited[currentNode] = true;

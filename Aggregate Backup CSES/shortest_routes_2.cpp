@@ -16,6 +16,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1672
+
 int main()
 {
     // Main idea here is simply to use Floyd Warshall algorithm. If n is large and the graph is sparse, Dijkstra's started from each query could be faster

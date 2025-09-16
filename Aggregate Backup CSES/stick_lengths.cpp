@@ -9,6 +9,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1074
+
 // it can be proven that the number x which minimizes the sum of the absolute values of (x-array[i]) is the Median of the array
 
 int main()

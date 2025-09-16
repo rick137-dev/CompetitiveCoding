@@ -16,6 +16,10 @@
 using namespace std;
 int mod = 1e9 + 7;
 
+// Problem : https://cses.fi/problemset/task/1676
+
+// Solution utilizing Disjoint Set data structure
+
 struct DisjointSet
 {
     vector<int> parent;

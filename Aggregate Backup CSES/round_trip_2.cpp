@@ -15,6 +15,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1678
+
 /*
 Simple dfs on graph, with directed graphs we can use DP by saving status of explored non-cycle-containing parts of the graph,
 keeping the algorithm O(n)

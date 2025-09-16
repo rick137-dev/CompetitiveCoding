@@ -7,6 +7,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1618
+
 int main()
 {
     long long N;

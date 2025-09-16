@@ -16,9 +16,14 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1194
+
 vector<pair<int, int>> directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
-// The main idea behind this solution is multi-source BFS, running a BFS from both every monster and the player, and check if the player can reach a border
+/*
+The main idea behind this solution is multi-source BFS, running a BFS from both every monster and the player,
+and check if the player can reach a border
+*/
 
 int main()
 {

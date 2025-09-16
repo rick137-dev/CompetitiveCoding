@@ -13,7 +13,12 @@ using namespace std;
 
 int mod = 1e9 + 7;
 
-// This solution is O(N^3), there exists a better O(N^2) solution using hash maps, but similarly with the 3 number sum problem, the inputs cause frequent hashing collisions
+// Problem : https://cses.fi/problemset/task/1642
+
+/*
+This solution is O(N^3), there exists a better O(N^2) solution using hash maps, but similarly with the 3 number sum problem,
+the inputs cause frequent hashing collisions
+*/
 
 int main()
 {
