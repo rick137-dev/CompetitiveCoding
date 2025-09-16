@@ -10,6 +10,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1192
+
 static vector<pair<int, int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
 void dfs(vector<string> &grid, int i, int j)

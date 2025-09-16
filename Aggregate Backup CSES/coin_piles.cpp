@@ -10,6 +10,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1754
+
 bool canEmpty(long long a, long long b)
 {
 

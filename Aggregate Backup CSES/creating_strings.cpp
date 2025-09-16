@@ -8,6 +8,9 @@
 #include <unordered_set>
 
 using namespace std;
+
+// Problem : https://cses.fi/problemset/task/1622
+
 void backtrack(unordered_set<string> &permutations, string &current, int index)
 {
     if (index == current.size())

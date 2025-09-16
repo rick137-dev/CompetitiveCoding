@@ -9,6 +9,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1624
+
 bool canPlace(vector<string> &board, int i, int j)
 {
 

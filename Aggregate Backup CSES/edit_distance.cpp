@@ -13,7 +13,10 @@
 #include <map>
 
 using namespace std;
-// This includes both top down and bottom up solutions
+
+// Problem : https://cses.fi/problemset/task/1639
+
+// 2D Resursive solution
 int minDistance(string &in1, string &in2, int i, int j, vector<vector<int>> &dp)
 {
     if (i == in1.length())
@@ -34,6 +37,7 @@ int minDistance(string &in1, string &in2, int i, int j, vector<vector<int>> &dp)
     }
 }
 
+// 2D Iterative solution
 int minDistanceIterative(string &in1, string &in2, vector<vector<int>> &dp)
 {
     int m = in1.size();
@@ -62,6 +66,42 @@ int minDistanceIterative(string &in1, string &in2, vector<vector<int>> &dp)
     return dp[0][0];
 }
 
+// 1D Iterative solution
+int minDistance1D(string &in1, string &in2)
+{
+    int m = in1.size();
+    int n = in2.size();
+
+    vector<int> dp(n + 1), prev(n + 1);
+
+    for (int j = 0; j <= n; j++)
+    {
+        dp[j] = n - j;
+    }
+
+    for (int i = m - 1; i >= 0; i--)
+    {
+        prev = dp;
+        dp[n] = m - i;
+
+        for (int j = n - 1; j >= 0; j--)
+        {
+            if (in1[i] == in2[j])
+            {
+                dp[j] = prev[j + 1];
+            }
+            else
+            {
+                dp[j] = 1 + min({prev[j + 1],
+                                 dp[j + 1],
+                                 prev[j]});
+            }
+        }
+    }
+
+    return dp[0];
+}
+
 int main()
 {
 
@@ -70,7 +110,6 @@ int main()
     cin >> in1;
     cin >> in2;
     vector<vector<int>> dp(in1.size(), vector<int>(in2.size(), -1));
-    vector<vector<int>> dp1(in1.size() + 1, vector<int>(in2.size() + 1, 0)); // for Iterative version
     cout << minDistance(in1, in2, 0, 0, dp);
 
     return 0;

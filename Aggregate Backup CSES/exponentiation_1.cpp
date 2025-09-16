@@ -11,7 +11,9 @@
 using namespace std;
 
 long mod = 1e9 + 7;
+// Problem : https://cses.fi/problemset/task/1095
 
+// Solution is efficient binary exponentiation in logarithmic time
 long long power(int a, int N)
 {
     long long result = 1;

@@ -17,7 +17,9 @@ using namespace std;
 
 int mod = 1e9 + 7;
 
-// The naming convention here is successor even if we are axtually calculating predecessors.
+// Problem : https://cses.fi/problemset/task/1687
+
+// The naming convention here is successor even if we are actually calculating predecessors.
 
 int successor(int i, int k, vector<vector<int>> &succ)
 {
@@ -34,6 +36,7 @@ int successor(int i, int k, vector<vector<int>> &succ)
     return v;
 }
 
+// This solution utilizes the Binary Lifting technique to find successors in logarithmic time
 int main()
 {
 

@@ -12,6 +12,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1623
+
 // This is quite similar to subset sum problem so it can be solved with DP, but this brute force approach is ok for small N
 int main()
 {

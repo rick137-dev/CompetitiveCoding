@@ -10,6 +10,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/2216
+
 int main()
 {
     int N;

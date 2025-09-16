@@ -12,6 +12,9 @@ using namespace std;
 
 long outer_mod = 1e9 + 7;
 
+// Problem : https://cses.fi/problemset/task/1712
+
+// Here I use binary exponentiation again, in tandem with Fermat's little theorem to make it efficient
 long long power(int a, long N, long mod)
 {
     long long result = 1;

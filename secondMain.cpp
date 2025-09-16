@@ -16,10 +16,31 @@
 using namespace std;
 int mod = 1e9 + 7;
 
+class StaticMinimumRangeQuery
+{
+private:
+    vector<int> numbers;
+    vector<vector<int>> MinimumRange;
+
+public:
+    StaticMinimumRangeQuery(vector<int> inputNums)
+    {
+        numbers = inputNums;
+        generateMinimumRange();
+    }
+
+    void generateMinimumRange()
+    {
+    }
+
+    int getMinimum(int a, int b)
+    {
+        return MinimumRange[a][b];
+    }
+};
 
 int main()
 {
-    
 
     return 0;
 }

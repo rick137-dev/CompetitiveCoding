@@ -10,6 +10,8 @@
 
 using namespace std;
 
+// Problem : https://cses.fi/problemset/task/1146
+
 long long func(long long N)
 {
     if (N == 0)
