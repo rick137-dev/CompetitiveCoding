@@ -1,5 +1,10 @@
 #include <vector>
 
+/*
+This Data Structure is the Disjoint Set, this specific implementation uses the size of the sets to determine the joins, another version
+uses rank instead, which has the same time complexity but with a different meaning or objective in terms of set comparisons.
+*/
+
 using namespace std;
 struct DisjointSet
 {
