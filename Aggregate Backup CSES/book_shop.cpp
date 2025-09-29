@@ -16,22 +16,21 @@ using namespace std;
 // Problem : https://cses.fi/problemset/task/1158
 
 // Recursive 2D solution, simpler to code but uses more memory
-long long maxPages(int idx, long long budget, vector<long long> &pages, vector<long long> &prices, vector<vector<long long>> &dp)
+long long maxPages(int index, long long budget, vector<long long> &pages, vector<long long> &prices, vector<vector<long long>> &dp)
 {
-       if (idx < 0)
+       if (index < 0)
               return 0;
-       if (dp[idx][budget] != -1)
-              return dp[idx][budget];
+       if (dp[index][budget] != -1)
+              return dp[index][budget];
 
-       long long res = maxPages(idx - 1, budget, pages, prices, dp);
+       long long res = maxPages(index - 1, budget, pages, prices, dp);
 
-       // option 2: take this book (if budget allows)
-       if (prices[idx] <= budget)
+              if (prices[index] <= budget)
        {
-              res = max(res, maxPages(idx - 1, budget - prices[idx], pages, prices, dp) + pages[idx]);
+              res = max(res, maxPages(index - 1, budget - prices[index], pages, prices, dp) + pages[index]);
        }
 
-       return dp[idx][budget] = res;
+       return dp[index][budget] = res;
 }
 
 // Iterative 1D DP solution, 2D was recursive, it had the same runtime but the large memory use caused runtime errors, this solution uses optimal amounts of memory
