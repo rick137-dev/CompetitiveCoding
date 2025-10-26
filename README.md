@@ -10,7 +10,7 @@ The goal of this repository is to document my learning process, practice problem
 Problems come from:
 - **USACO Training Gateway**
 - **IOI** and **ICPC** past papers
-- **Codeforces** contests
+- **Codeforces** contests and training
 - **CSES Problem Set**
 - Other online contests and archives
 ---
@@ -19,7 +19,7 @@ Problems come from:
 
 - File names are chosen to match the problem they solve.
 - For **IOI** and **ICPC** problems, the corresponding past paper is included in the solution folder.
-- For **Codeforces** problems, a link to the original problem is provided in the solution file.
+- For **Codeforces** problems, a link to the original problem is provided in the solution file. The problems are also divided based on whether they are from an active contest or just from training. 
 - For other sources (e.g., USACO, CSES), the problems can be found on their respective websites, and the names of the solution files indicate which problem they solve so an interested user can find the corresponding problem. 
 
 ---
