@@ -20,7 +20,7 @@ const long long mod = 1e9 + 7;
 /*
 2D Recursive solution
 This is the recursive version, uses a large amount of memory and has a larger constant factor in the asymptotic time complexity.
-It returns twice the number required, and when dividing one must use the modular inverse of 2 instead of just standard division
+It returns twice the number required, and when dividing one must use the modular inverse of 2 mod P instead of just standard division
 
 */
 long long numSums(long long number, long long currentSum, vector<vector<long long>> &dp)
