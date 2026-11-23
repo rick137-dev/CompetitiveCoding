@@ -9,7 +9,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "g++ secondMain.cpp -o build\\secondMain.exe",
+            "command": "g++ -std=c++20 secondMain.cpp -o build\\secondMain.exe",
             "dependsOn": "clean build folder",
             "group": {
                 "kind": "build",
@@ -23,6 +23,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                "-std=c++20",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
