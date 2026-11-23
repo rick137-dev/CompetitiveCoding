@@ -12,10 +12,15 @@
 #include <stack>
 #include <map>
 #include <cmath>
+#include <bit>
 
 using namespace std;
 int mod = 1e9 + 7;
 
+// Problem :
+
 int main()
 {
+
+    return 0;
 }
